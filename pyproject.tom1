@@ -1,0 +1,6 @@
+[project]
+name = "smart-lender"
+requires-python = ">=3.10,<3.11"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
