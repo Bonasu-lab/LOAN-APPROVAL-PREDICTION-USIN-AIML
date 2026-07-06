@@ -1,3 +1,5 @@
+# model = joblib.load('model.pkl') 
+# df = pd.DataFrame(...)
 from flask import Flask, render_template, request
 import pickle # <-- idi missing undi
 import numpy as np
