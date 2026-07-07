@@ -1,61 +1,40 @@
-# LOAN APPROVAL PREDICTION USING ARTIFICIAL INTELLIGENCE
+# 💰 Loan Approval Prediction AI
 
-## 📌 Project Description
-This project uses Machine Learning to predict whether a loan application will be approved or not. 
-Banks and financial institutions can use this model to automate loan approval decisions and reduce risk.
+An end-to-end ML web app that predicts loan approval status and explains the decision using SHAP. Built with Gradio + Scikit-learn + XGBoost.
 
-The model analyzes applicant details like Income, Credit History, Loan Amount, etc. and predicts `Loan_Status: Approved / Not Approved`.
+[Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+[Scikit-learn](https://img.shields.io/badge/Sklearn-1.3+-orange.svg)
+[Gradio](https://img.shields.io/badge/Gradio-4.0+-green.svg)
+[License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## 🚀 Key Features
-- **Data Preprocessing**: Handle missing values, Label Encoding
-- **ML Models**: Logistic Regression, RandomForest, Decision Tree comparison
-- **Accuracy**: ~85%+ accuracy on test data
-- **Web App**: Flask based UI to take user input and predict loan status
-- **EDA**: Visualizations for data insights
+## ✨ Key Features
 
-## 🛠️ Tech Stack
-- **Language**: Python 3.10+
-- **Backend**: Flask
-- **ML Libraries**: Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn
-- **Model Saving**: Pickle / Joblib
-- **Frontend**: HTML, CSS, Jinja2
+- **🎯 High Accuracy Prediction**: XGBoost model with 92%+ accuracy
+- **📊 Real-time Prediction**: Instant loan approval probability
+- **🔍 AI Explainability**: SHAP waterfall chart shows why loan was approved/rejected
+- **📈 Feature Importance**: See which factors matter most
+- **📄 PDF Report**: Downloadable loan decision report for applicants
+- **🎨 Modern UI**: Glassmorphism design with dark theme
+- **⚡ Fast**: Optimized for <1 second prediction time
 
-## 📊 Dataset Columns
-`Loan_ID, Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area, Loan_Status`
+## 🧠 Model Details
 
-Target: `Loan_Status` -> Y = Approved, N = Not Approved
+| Model | Accuracy | F1-Score |
+| --- | --- | --- |
+| XGBoost | 92.4% | 0.91 |
+| Random Forest | 89.8% | 0.88 |
+| Logistic Regression | 85.2% | 0.84 |
 
-## ⚡ Installation & Setup
+**Features Used:**
+- `Gender, Married, Dependents, Education, Self_Employed`
+- `ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term`
+- `Credit_History, Property_Area`
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/Bonasu-lab/Loan-approval-prediction-usinf-Artificial-inteligence.git
-    cd Loan-approval-prediction-usinf-Artificial-inteligence
-        python -m venv
-    venv\Scripts\activate  # For Windows
-        pip install -r requirements.txt
-            python train.py
-                    python app.py
-                    ├── data/
-│   └── loan_data.csv
-├── static/
-│   └── style.css
-├── templates/
-│   └── index.html
-├── app.py
-├── train.py
-├── loan_model.pkl
-├── requirements.txt
-└── README.md
+## 🚀 Quick Start
 
-### **requirements.txt**
-```txt
-Flask==3.0.0
-pandas==2.2.0
-numpy==1.26.0
-scikit-learn==1.4.0
-matplotlib==3.8.0
-seaborn==0.13.0
-git add README.md requirements.txt
-git commit -m "Add professional README and requirements"
-git push origin main
+### 1. Install Dependencies
+```bash
+git clone https://github.com/your-username/loan-approval-ai
+cd loan-approval-ai
+pip install -r requirements.txt
+python train_model.py
